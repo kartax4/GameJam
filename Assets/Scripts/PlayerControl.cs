@@ -8,10 +8,12 @@ public class PlayerControl : MonoBehaviour
     public float jumpForce = 5f;
     private bool isJumping = false;
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -31,6 +33,14 @@ public class PlayerControl : MonoBehaviour
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
         rb.velocity = new Vector2(movement.x * speed, rb.velocity.y);
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        if (movement.x > 0)
+        {
+            spriteRenderer.flipX = false; // Obróæ postaæ w prawo
+        }
+        else if (movement.x < 0)
+        {
+            spriteRenderer.flipX = true; // Obróæ postaæ w lewo
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
