@@ -296,9 +296,10 @@ GameObject:
   - component: {fileID: 240597907}
   - component: {fileID: 240597906}
   - component: {fileID: 240597910}
+  - component: {fileID: 240597911}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -446,6 +447,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 5
+--- !u!114 &240597911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240597905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be3ec4cb9e0a9b4ab88425d31be49ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 5021621833051983906, guid: ae74cb303b4b1e44ba860874393e4749, type: 3}
+  projectileSpawnPoint: {fileID: 240597909}
+  shootForce: 10
+  shootRate: 0.2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
